@@ -9,6 +9,10 @@
   align-items: center;
   background-color: #000000;
 
+  @media only screen and (max-width: 768px) {
+    padding: px-to-rem(27) px-to-rem(56);
+  }
+
   img:hover {
     cursor: pointer;
     transition: filter 250ms ease-in-out;
