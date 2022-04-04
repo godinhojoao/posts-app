@@ -1,0 +1,20 @@
+@import './../../styles/utilities';
+
+.header {
+  height: px-to-rem(80);
+  width: 100%;
+  padding: px-to-rem(27) px-to-rem(64);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+
+  img:hover {
+    cursor: pointer;
+    transition: filter 250ms ease-in-out;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+  }
+}

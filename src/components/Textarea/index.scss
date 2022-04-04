@@ -1,0 +1,21 @@
+@import './../../styles/utilities';
+@import './../../styles/settings/settings.variables';
+
+.textarea {
+  width: 100%;
+  height: px-to-rem(28);
+  padding: px-to-rem(6) px-to-rem(10);
+  line-height: px-to-rem(16);
+  font-size: px-to-rem(14);
+  font-weight: 400;
+  background: map-get($colors, 'secundary');
+  border: 1px solid map-get($colors, 'gray');
+  border-radius: px-to-rem(4);
+  resize: vertical;
+  transition: border-color 250ms;
+
+  &:hover,
+  &:focus {
+    border-color: darken(map-get($colors, 'gray'), 30%);
+  }
+}

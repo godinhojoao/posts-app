@@ -1,0 +1,31 @@
+@import './../../styles/utilities';
+@import './../../styles/settings/settings.variables';
+
+.add-post-container {
+  margin-top: px-to-rem(44);
+  padding: px-to-rem(24) px-to-rem(30);
+  border: 1px solid map-get($colors, 'dark-gray');
+  background-color: map-get($colors, 'secundary');
+
+  &__title {
+    margin-bottom: px-to-rem(34);
+  }
+
+  &__paragraph {
+    margin-bottom: px-to-rem(8);
+
+    &:last-of-type {
+      margin-top: px-to-rem(20);
+    }
+  }
+
+  &__textarea {
+    min-height: px-to-rem(74);
+  }
+
+  &__footer {
+    width: 100%;
+    margin-top: px-to-rem(22);
+    text-align: right;
+  }
+}

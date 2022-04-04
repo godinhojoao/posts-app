@@ -1,0 +1,32 @@
+@import './../../styles/utilities';
+@import './../../styles/settings/settings.variables';
+
+.button {
+  padding: px-to-rem(7) px-to-rem(28);
+  line-height: px-to-rem(19);
+  font-size: px-to-rem(16);
+  font-weight: 700;
+  background-color: map-get($colors, 'primary');
+  color: map-get($colors, 'secundary');
+  border: transparent;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+
+  &--secundary {
+    background-color: map-get($colors, 'secundary');
+    border: 1px solid map-get($colors, 'primary');
+    color: map-get($colors, 'primary');
+  }
+
+  &:not(.button--disabled) {
+    &:hover,
+    &:focus {
+      background-color: lighten(map-get($colors, 'primary'), 8%);
+    }
+  }
+
+  &--disabled {
+    background-color: lighten(map-get($colors, 'primary'), 38%);
+    cursor: default;
+  }
+}

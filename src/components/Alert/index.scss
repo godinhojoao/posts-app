@@ -1,0 +1,39 @@
+@import './../../styles/utilities';
+@import './../../styles/settings/settings.variables';
+
+.alert-container {
+  display: grid;
+  grid-gap: px-to-rem(36);
+  position: absolute;
+  top: px-to-rem(124);
+  left: px-to-rem(80);
+  right: px-to-rem(80);
+  margin: 0 auto;
+  padding: px-to-rem(38) px-to-rem(46);
+  background-color: map-get($colors, 'secundary');
+  color: map-get($colors, 'primary');
+
+  @media only screen and (max-width: 725px) {
+    padding: px-to-rem(24) px-to-rem(32);
+  }
+
+  @media only screen and(min-width: 1000px) {
+    max-width: px-to-rem(651);
+  }
+
+  &__content {
+    line-height: px-to-rem(22);
+    font-size: px-to-rem(25);
+    font-weight: 400;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    button:first-of-type {
+      margin-right: px-to-rem(16);
+    }
+  }
+}

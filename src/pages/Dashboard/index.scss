@@ -1,0 +1,11 @@
+@import './../../styles/settings/settings.variables';
+@import './../../styles/utilities';
+
+.dashboard {
+  width: 100%;
+  padding: 0 px-to-rem(78);
+
+  @media only screen and (max-width: 800px) {
+    padding: 0 px-to-rem(40);
+  }
+}
