@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../actions/auth';
 import { MainState } from '../../types/mainState.interface';
 
+import exitIcon from '../../assets/exit-icon.svg';
+
 import './index.scss';
 
 const Header: React.FC = () => {
@@ -35,7 +37,7 @@ const Header: React.FC = () => {
       {isLogoutVisible && (
         <img
           onClick={() => handleLogout()}
-          src="src/assets/exit-icon.svg"
+          src={exitIcon}
           alt="Exit"
         />
       )}

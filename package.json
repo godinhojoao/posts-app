@@ -10,6 +10,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
+    "@honkhonk/vite-plugin-svgr": "^1.1.0",
     "axios": "^0.26.1",
     "history": "^4.10.0",
     "moment": "^2.29.2",

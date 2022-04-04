@@ -4,6 +4,8 @@ import { Post } from '../../types/post.interface';
 import { Modal } from '../Modal';
 import { Alert } from '../Alert';
 import { PostContainer } from '../PostContainer';
+import removeIcon from './../../assets/remove-icon.svg';
+import editIcon from './../../assets/edit-icon.svg';
 
 import { postsApi } from '../../services/postsApi';
 
@@ -69,12 +71,12 @@ const PostCard = (props: PostCardProps): JSX.Element => {
 
           <div className="post-card__header__icons">
             <img
-              src="src/assets/remove-icon.svg"
+              src={removeIcon}
               alt="Remove post"
               onClick={() => setIsAlertVisible(true)}
             />
             <img
-              src="src/assets/edit-icon.svg"
+              src={editIcon}
               alt="Edit post"
               onClick={() => setIsEditing(true)}
             />
