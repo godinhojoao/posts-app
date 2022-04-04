@@ -32,6 +32,27 @@ textarea {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: 20px;
+
+    &-track {
+      background-color: transparent;
+    }
+
+    &-thumb {
+      background-color: #000;
+      border-radius: 15px;
+      border: 6px solid transparent;
+      background-clip: content-box;
+
+      &:hover {
+        background-color: rgb(43, 42, 42);
+      }
+    }
+  }
+}
+
 .default-subtitle {
   line-height: px-to-rem(26);
   font-size: px-to-rem(22);
