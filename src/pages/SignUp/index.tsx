@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 import { login } from '../../actions/auth';
@@ -10,7 +10,7 @@ import { postsApi } from '../../services/postsApi';
 import './index.scss';
 
 const SignUp: React.FC = () => {
-  const navigate = useNavigate();
+  const history = useHistory();
   const [name, setName] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const SignUp: React.FC = () => {
     const currentName = window.localStorage.getItem('posts-app-name');
 
     if (currentName) {
-      navigate('/dashboard');
+      history.push('/dashboard');
     }
 
     return () => {};
@@ -33,7 +33,7 @@ const SignUp: React.FC = () => {
     const posts = await postsApi.getPosts();
 
     dispatch(login(name, posts));
-    navigate('/dashboard');
+    history.push('/dashboard');
 
     setIsLoading(false);
   };

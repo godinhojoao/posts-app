@@ -1,10 +1,10 @@
 import {
   BrowserRouter as Router,
-  Routes as RoutesSwitch,
+  Switch as RoutesSwitch,
   Route,
+  Redirect,
 } from 'react-router-dom';
 
-import { NotFound } from './pages/NotFound';
 import { SignUp } from './pages/SignUp';
 import { Dashboard } from './pages/Dashboard';
 
@@ -12,10 +12,9 @@ const Routes = () => {
   return (
     <Router>
       <RoutesSwitch>
-        <Route path="*" element={<NotFound />} />
-
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/sign-up" component={() => <SignUp />} />
+        <Route exact path="/dashboard" component={() => <Dashboard />} />
+        <Route component={() => <Redirect to={{ pathname: '/sign-up' }} />} />
       </RoutesSwitch>
     </Router>
   );

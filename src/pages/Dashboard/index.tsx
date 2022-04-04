@@ -1,5 +1,5 @@
 import { Fragment, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { MainState } from '../../types/mainState.interface';
@@ -13,7 +13,7 @@ import './index.scss';
 
 const Dashboard = (): JSX.Element => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const history = useHistory();
   let name = useSelector(
     (state: { auth: MainState }) => state && state.auth && state.auth.name
   );
@@ -28,7 +28,7 @@ const Dashboard = (): JSX.Element => {
     name = name ? name : window.localStorage.getItem('posts-app-name');
 
     if (!name) {
-      navigate('sign-up');
+      history.push('sign-up');
     } else {
       (async () => {
         if (!isLoading) {

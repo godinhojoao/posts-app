@@ -1,4 +1,4 @@
-import * as moment from 'moment';
+import moment from 'moment';
 
 export function formatDateDifference(firstDateToCompare: Date, dateToCompare: string) {
   const currentDate = moment(firstDateToCompare);
