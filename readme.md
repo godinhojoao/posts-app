@@ -23,6 +23,3 @@
 - `Typescript`
 - `Eslint`
   - To make the development local more standardized.
-
-## In the future I will add pagination, at (04/04) at night
-- So if you are here before it, just wait the 05/04 to see the `pagination` heheh :P

@@ -1,0 +1,78 @@
+@import './../../styles/utilities';
+@import './../../styles/settings/settings.variables';
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  user-select: none;
+  font-weight: 500;
+  margin-bottom: px-to-rem(20);
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: px-to-rem(10);
+    border: transparent;
+    border-radius: px-to-rem(4);
+    background-color: map-get($colors, 'primary');
+    transition: background-color 250ms;
+
+    @media only screen and (max-width: 725px) {
+      padding: px-to-rem(1) 0;
+    }
+
+    &:not(:disabled) {
+      cursor: pointer;
+
+      @media only screen and (min-width: 1000px) {
+        &:hover {
+          background-color: darken(map-get($colors, 'gray'), 10%);
+        }
+      }
+    }
+
+    &:disabled {
+      background-color: map-get($colors, 'light-gray');
+    }
+
+    &:last-of-type {
+      margin-left: 2%;
+    }
+  }
+
+  &__page {
+    padding: px-to-rem(14) px-to-rem(16);
+    margin-left: 2%;
+    font-size: px-to-rem(14);
+    color: map-get($colors, 'primary');
+    border: 1px solid map-get($colors, 'primary');
+    border-radius: px-to-rem(4);
+    transition: background-color 250ms;
+    cursor: pointer;
+
+    @media only screen and (max-width: 725px) {
+      padding: px-to-rem(7) px-to-rem(8);
+    }
+
+    @media only screen and (min-width: 1000px) {
+      &:hover {
+        background-color: darken(map-get($colors, 'secundary'), 10%);
+      }
+    }
+
+    &--current {
+      background-color: map-get($colors, 'primary');
+      color: map-get($colors, 'secundary');
+      font-weight: 700;
+
+      @media only screen and (min-width: 1000px) {
+        &:hover {
+          background-color: map-get($colors, 'primary');
+        }
+      }
+    }
+  }
+}

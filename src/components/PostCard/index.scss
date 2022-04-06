@@ -13,13 +13,17 @@
   }
 
   &__header {
-    height: px-to-rem(70);
+    min-height: px-to-rem(70);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: px-to-rem(24) px-to-rem(30);
     background-color: map-get($colors, 'primary');
     word-break: break-all;
+
+    h3 {
+      word-break: break-word;
+    }
 
     &__icons {
       display: flex;
@@ -51,10 +55,14 @@
   }
 
   &__content {
-    display: grid;
-    grid-template-rows: 0.2fr 1.8fr;
+    display: flex;
+    flex-direction: column;
     padding: px-to-rem(23) px-to-rem(30);
     word-break: break-all;
+
+    p {
+      text-align: justify;
+    }
 
     &__header {
       display: flex;

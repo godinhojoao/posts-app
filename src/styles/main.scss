@@ -11,6 +11,7 @@ body,
   background-color: map-get($colors, 'secundary');
   font-family: map-get($fonts, 'primary');
   font-size: px-to-rem(16);
+  scroll-behavior: smooth;
 
   @media only screen and (max-width: 768px) {
     font-size: px-to-rem(14);

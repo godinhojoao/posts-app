@@ -6,8 +6,13 @@ import { PostWithPagination } from '../types/postWithPagination.interface';
 class PostsApi {
   private readonly baseUrl = 'https://dev.codeleap.co.uk/careers/';
 
-  async getPosts(): Promise<PostWithPagination> {
-    const url = `${this.baseUrl}`;
+  async getPosts(offset?: number): Promise<PostWithPagination> {
+    let url = `${this.baseUrl}/?limit=10`;
+
+    if(offset) {
+      url += `&offset=${offset}`;
+    }
+
     const response = await axios.get(url);
 
     return response.data;

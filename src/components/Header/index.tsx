@@ -29,7 +29,7 @@ const Header: React.FC = () => {
   }
 
   return (
-    <header className="header">
+    <header id="top" className="header">
       <h1 className="default-subtitle default-subtitle--white">
         CodeLeap Network
       </h1>
